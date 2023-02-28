@@ -1,0 +1,16 @@
+seata:
+  data-source-proxy-mode: AT
+  client:
+    load-balance:
+      type: RandomLoadBalance
+      virtual-nodes: 10
+  config:
+    type: file
+  enable-auto-data-source-proxy: true
+  use-jdk-proxy: false
+  service:
+    grouplist:
+      default: 192.168.202.103:8091
+    enable-degrade: false #允许退化
+    disable-global-transaction: false #禁用全局事务
+  enabled: true

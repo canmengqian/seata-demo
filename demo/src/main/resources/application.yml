@@ -1,19 +1,7 @@
-
-seata:
-  data-source-proxy-mode: AT
-  client:
-    load-balance:
-      type: RandomLoadBalance
-      virtual-nodes: 10
-  config:
-    type: file
-  enable-auto-data-source-proxy: true
-  use-jdk-proxy: false
-  service:
-    grouplist:
-      default: 127.0.0.1:8091
 spring:
   application:
     name: seata-demo
+  profiles:
+    active: file
 server:
   port: 8082
